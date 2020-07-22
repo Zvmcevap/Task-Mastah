@@ -56,9 +56,6 @@ def delete(id):
 
 # Update the particular task
 @app.route('/update/<int:id>')
-def update(id)
-    task_to_update = Todo.query.get_or_404(id)
-
 
 
 
