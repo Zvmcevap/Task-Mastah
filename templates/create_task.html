@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    <div class="container">
+        <div class="container bg-primary items-align-center">
+            <h1 style="text-align: center">Create a New Task</h1>
+        </div>
+        <br>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">Name and description of the task</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="input-group">
+                                <span class="input-group-addon">name</span>
+                                <input type="text" placeholder="Enter name of the task">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="input-group">
+                                <span class="input-group-addon">Description</span>
+                                <input type="text" placeholder="Enterdescription">
+                            </div>
+                        </div>
+                        <div class="col"><h1>WHATAFAK</h1></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Locations or other tags for the task</div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Dates and Times</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 
-{% block head %}
-<title>Task-Masta</title>
-{% endblock %}
+{% block content %}
+<div class="container">
+        <!-- Input new task stuffs -->
+    <form action="/" method="POST">
+        <input type="text" name="content" id="content">
+        <input type="submit" value="Add Task">
+    </form>
+    {% if tasks|length<1 %}
+    <h4>There are no tasks atm</h4>
 
-
-{% block body %}
-<div class="content">
-    <h1 style="text-align: center">Task Mastah</h1>
+    {% else %}
     <!-- Main table where the tasks are displayed -->
-    <table>
+    <table class="table table-striped">
         <tr>
             <th>Task</th>
             <th>Added</th>
@@ -23,15 +26,11 @@
             <td>
                 <a href="/delete/{{task.id}}">Delete</a>
                 <br>
-                <a href="">Update</a>
+                <a href="/update/{{task.id}}">Update</a>
             </td>
         </tr>
         {% endfor %}
     </table>
-    <!-- Input new task stuffs -->
-    <form action="/" method="POST">
-        <input type="text" name="content" id="content">
-        <input type="submit" value="Add Task">
-    </form>
+    {% endif %}
 </div>
 {% endblock %}
